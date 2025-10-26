@@ -1,56 +1,153 @@
-{
-    margin: 20;
-    box-sizing: border-box
-    
-}
+        /* Configuración de Fuentes y Layout Base */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f7f7f7;
+            color: #1f2937; /* Color de texto base oscuro */
+        }
+        
+        /* Contenedor Principal */
+        .container-main {
+            flex-grow: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
 
-body {
-    font-family: Arial,sans-serif;
-    line-height: 1.5;
-    background-color:rgb(50, 42, 165);
+        /* --- Estilos del Encabezado (Punto 4a) --- */
+        header {
+            background-color: #1a202c; /* Azul oscuro */
+            color: white;
+            padding: 1rem 2rem;
+            border-bottom: 4px solid #38bdf8; /* Borde celeste */
+        }
 
-}
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-/"Dashboard con grid */
--dashboard{
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    min-height: 80vh;
-}
+        .header-info {
+            flex-grow: 1;
+        }
+        
+        /* Estilos de Tipografía del Encabezado */
+        .header-info h1 {
+            font-size: 1.5rem; /* Equivalente a text-2xl */
+            font-weight: bold;
+            margin: 0;
+        }
+        .header-info p:nth-of-type(1) { /* Asignatura */
+            font-size: 1.25rem; /* Equivalente a text-xl */
+            font-weight: 600;
+            margin: 0.25rem 0;
+        }
+        .header-info p:nth-of-type(2) { /* Alumno */
+            font-size: 1.125rem; /* Equivalente a text-lg */
+            margin: 0.25rem 0;
+        }
 
-/* sidebar */
-.sidebar {
-    background-color:rgb(30, 210, 66);
-    color:rgb(205, 196, 255);
-    padding: 20px;
+        .header-topics {
+            font-size: 0.875rem; /* small */
+            color: #94a3b8; /* Gris claro */
+            margin-top: 0.25rem; /* Equivalente a mt-1 */
+        }
+        
+        .header-topics span {
+            font-weight: 600;
+            color: #38bdf8;
+        }
+        
+        /* --- Estilos del Pie de Página (Punto 4b) --- */
+        footer {
+            background-color: #1a202c;
+            color: #94a3b8;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.8rem;
+        }
+
+        /* --- Estilos del Cuerpo Principal --- */
+        .container-main h2 {
+            font-size: 1.875rem; /* Equivalente a text-3xl */
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 1.5rem; /* Equivalente a mb-6 */
+            text-align: center;
+        }
+        
+        .container-main .description {
+            text-align: center;
+            color: #4b5563; /* Gris más oscuro */
+            margin-bottom: 2rem; /* Equivalente a mb-8 */
+        }
+
+        /* --- Estilos de la Cuadrícula (display: grid) para los Contenedores (Punto 4d) --- */
+        .grid-layout {
+            display: grid;
+            /* Define 4 columnas fijas, todas de igual tamaño (1fr) */
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px;
+            padding-top: 1rem;
+        }
+
+        /* --- Estilos de los Contenedores y Efecto Hover (Punto 4d) --- */
+        .contenedor {
+            padding: 1.5rem;
+            border-radius: 12px;
+            color: #1f2937; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Transición para el efecto hover ✨ */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        /* Tipografía interna del Contenedor */
+        .contenedor h3 {
+            font-size: 1.25rem; /* Equivalente a text-xl */
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 0.75rem; /* Equivalente a mb-3 */
+        }
+        .contenedor p {
+            font-size: 0.875rem; /* Equivalente a text-sm */
+            margin-top: 0;
+            margin-bottom: 1rem; /* Equivalente a mb-4 */
+        }
 
 
-}
+        /* Efecto Hover (resalta el contenedor al pasar el cursor) ✨ */
+        .contenedor:hover {
+            transform: translateY(-5px) scale(1.02); /* Se levanta ligeramente y se agranda */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+            z-index: 10;
+        }
 
-.sidebar h2 {
-    margin-bottom: 20px;
-    font-size: 1.5em;
-}
+        .contenedor a {
+            font-weight: 700;
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+            color: #1a202c; /* Asegurar buen contraste */
+        }
+        .contenedor a:hover {
+            color: #4b5563; /* Oscurece el enlace al pasar el cursor */
+        }
 
-.sidebar ul {
-    list-style: none;
-
-}
-
-.sidebar ul li a{
-    color:#12f35d;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-
-}
-
-.sidebar ul li a{
-    color:blue;
-    text-decoration: none;
-    font-size: color 0.3
-}
-
-.sidebarul li a:hover {
-    
-}
+        /* Colores de Fondo Diferenciados (Requisito 🎨) */
+        .contenedor-1 { background-color: #fca5a5; /* Rojo claro */ }
+        .contenedor-2 { background-color: #fde047; /* Amarillo */ }
+        .contenedor-3 { background-color: #a7f3d0; /* Verde menta */ }
+        .contenedor-4 { background-color: #93c5fd; /* Azul cielo */ }

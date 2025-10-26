@@ -1,44 +1,81 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="Viewport" content="width=device-widht, initial-scale=1.0">
-    <title>Grid</title>
-    <link rel="stylesheet" href="grid.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Web</title>
+    
+    <link rel="stylesheet" href="index.CSS">
 </head>
-<body class="grid-container">
-    <header class="header">Instituto Maria Auxiliadora</header>
-    <header class="header">Asignatura:</header>
-    <header class="header">Diseño web</header>
-    <header class="header">Alumno:TU</header>
-    <header class="header">NOMBRE</header>
-    <header class="header">COMPLETO]</header>
-    <header class="header">Temas vistos:</header>
-    <header class="header">Fundamentos de</header>
-    <header class="haeder">JavaScript y</header>
-    <header class="header">Maquetado Web</header>
+<body>
+
+    <!-- ENCABEZADO (Punto 4a) -->
+    <header>
+        <div class="header-content">
+            <!-- LOGO del Instituto (Tamaño 150px) -->
+            <img 
+                src="logo.png" 
+                alt="Logo del Instituto" 
+                style="height: auto; width: 150px;" 
+            />
+
+            <div class="header-info">
+                <h1>Instituto Maria Auxiliadora</h1>
+                <p>Asignatura: Diseño Web</p>
+                <p>Alumno: [TU NOMBRE COMPLETO]</p>
+                <div class="header-topics">
+                    Temas vistos: <span>Fundamentos de JavaScript</span> y <span>Maquetado Web</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CUERPO PRINCIPAL -->
+    <div class="container-main">
+        <h2>Contenido del Semestre</h2>
+        <p class="description">Haz clic en los enlaces para acceder a los recursos clave vistos en clase.</p>
+        
+        <!-- CUATRO CONTENEDORES CON DISPLAY: GRID (Punto 4c & 4d) -->
+        <div class="grid-layout">
+            
+            <!-- Contenedor 1: Fundamentos de JavaScript -->
+            <div class="contenedor contenedor-1">
+                <h3>Fundamentos de JS</h3>
+                <p>Variables, tipos de datos y operadores.</p>
+                <a href="fundamentos_js.html">Ejercicios Fundamentos de JS</a>
+            </div>
+
+            <!-- Contenedor 2: Estructuras de Control -->
+            <div class="contenedor contenedor-2">
+                <h3>Estructuras Condicionales</h3>
+                <p>Uso de variables.</p>
+                <a href="variables.html">Declaracion de variables</a>
+            </div>
+
+            <!-- Contenedor 3: Diseño Responsivo -->
+            <div class="contenedor contenedor-3">
+                <h3>Eventos JavaScript</h3>
+                <p>Interacción con el usuario y manejo de eventos.</p>
+                <a href="eventos_js.html">Ejercicios Eventos JavaScript</a>
+            </div>
+
+            <!-- Contenedor 4: Modelo de Caja y Grid -->
+            <div class="contenedor contenedor-4">
+                <h3>Cuadro Comparativo</h3>
+                <p>Comparación de diferentes eventos JS.</p>
+                <a href="cuadro_comparativo.html">comparativo de eventos JS</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA (Punto 4b) -->
+    <footer>
+        2025 © Todos los derechos reservados
+        <a href="Repositorio_GitHub.pdf" style="color: #38bdf8; text-decoration: none;">Informe sobre el repositorio</a>
+        <a href="guia_Paso_a_Paso.pdf" style="color: #38bdf8; text-decoration: none;">Guía paso a paso</a>
+    </footer>
     
-    <nav class="navbar">Contenido del Semestre</nav>
-    <nav class="navbar">Haz clic en los enlaces para acceder a los</nav>
-    <nav class="navbar">recursos clave vistos en clases.</nav>
-    
-    <aside class="sidebar">Fundamentos de JS</aside>
-    <aside class="sidebar">Variables, tipos de datos y</aside>
-    <aside class="sidebar">Operadores.</aside>
-    <aside class="sidebar">Ejercicios</aside>
-    <aside class="sidebar">Fundamentos de JS</aside>
-    
-    <article class="main">Estructuras Condicionales</article>
-    <article class="main">Uso de Variables.</article>
-    <article class="main">Declaración de Variables</article>
-    <article class="main">Eventos JavaScript</article>
-    <article class="main">Interaccion con el usuario</article>
-    <article class="main">y manejo de eventos.</article>
-    <article class="main">Ejercicios Eventos JavaScript</article>
-    <article class="main">Cuadro Comparativo</article>
-    <article class="main">Comparacion de diferentes eventso de JS.</article>
-    <article class="main">Comparativo de eventos JS</article>
-    
-    <footer class="footer">2025 Todos los derechos reservados><a href="Informe sobre el repositorio Guia paso a paso"></a></footer>
-    </body>
-    </html>
+</body>
+</html>
